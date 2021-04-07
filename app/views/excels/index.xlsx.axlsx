@@ -3,9 +3,9 @@ wb.styles do |style|
   highlight_cell = style.add_style(bg_color: "EFC376")
 
   wb.add_worksheet(name: "excel") do |sheet|
-  sheet.add_row [ "date","place", "content" ]
+  sheet.add_row [ "name","date","place", "content" ]
     @excels.each do |excel|
-    sheet.add_row [ excel.day,excel.place, excel.content ]
+    sheet.add_row [ current_user.username, excel.day,excel.place, excel.content ]
     end
   end
 end

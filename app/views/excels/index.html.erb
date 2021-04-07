@@ -8,6 +8,7 @@
 <table>
   <thead>
     <tr>
+      <th>username</th>
       <th>Day</th>
       <th>Place</th>
       <th>Content</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @excels.each do |excel| %>
       <tr>
+        <td><%= current_user.username %></td>
         <td><%= excel.day %></td>
         <td><%= excel.place %></td>
         <td><%= excel.content %></td>
