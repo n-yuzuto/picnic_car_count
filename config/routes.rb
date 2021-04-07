@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :excels
   devise_for :users
   root 'pages#index'
   get 'pages/show'

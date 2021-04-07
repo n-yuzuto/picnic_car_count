@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @excel.day %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @excel.place %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @excel.content %>
+</p>
+
+<%= link_to 'Edit', edit_excel_path(@excel) %> |
+<%= link_to 'Back', excels_path %>

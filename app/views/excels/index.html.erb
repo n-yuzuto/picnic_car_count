@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>車だし管理表</h1>
+
+<!-- 以下の1行を追記 -->
+<%= link_to "Excel出力", excels_path(@excels, format: :xlsx) %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Place</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @excels.each do |excel| %>
+      <tr>
+        <td><%= excel.day %></td>
+        <td><%= excel.place %></td>
+        <td><%= excel.content %></td>
+        <td><%= link_to 'Show', excel %></td>
+        <td><%= link_to 'Edit', edit_excel_path(excel) %></td>
+        <td><%= link_to 'Destroy', excel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規投稿', new_excel_path %>
