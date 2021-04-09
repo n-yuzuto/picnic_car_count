@@ -32,7 +32,7 @@ class ExcelsController < ApplicationController
   # POST /excels or /excels.json
   def create
     @excel = Excel.new(excel_params)
-
+    @excel.creator = current_user.username
     respond_to do |format|
       if @excel.save
         format.html { redirect_to @excel, notice: "Excel was successfully created." }

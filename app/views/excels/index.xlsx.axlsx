@@ -5,7 +5,7 @@ wb.styles do |style|
   wb.add_worksheet(name: "excel") do |sheet|
   sheet.add_row [ "name","date","place", "content" ]
     @excels.each do |excel|
-    sheet.add_row [ current_user.username, excel.day,excel.place, excel.content ]
+    sheet.add_row [ excel.creator, excel.day,excel.place, excel.content ]
     end
   end
 end

@@ -19,7 +19,7 @@
   <tbody>
     <% @excels.each do |excel| %>
       <tr>
-        <td><%= current_user.username %></td>
+        <td><%= excel.creator %></td>
         <td><%= excel.day %></td>
         <td><%= excel.place %></td>
         <td><%= excel.content %></td>
