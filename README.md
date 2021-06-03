@@ -1,24 +1,6 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# サークルの車だし管理アプリ：
+【概要】  
+　サークルで車だしの業務効率化のためのWebアプリです。車だしに参加した人とその日時、場所、詳細をDBに挿入することで、会計側がExcelファイルとしてダウンロードできるようにしたアプリです。会計側はダウンロードボタンを押すだけで、車だしの管理表を入手することができ、日々の手作業をなくすことができます。  
+ 
+【開発背景】  
+　サークルの会計担当者が、イベントごとに車だしの参加者の詳細事項を書く作業を減らしたいと要望があり、改善できないかなと思って作成しました。今後は機能面を増やすとともに、ユーザー認証やDBにfirebase, google analitics、LINEのAPIを導入してさらに業務効率を改善できるように考えています。（セキュリティ面で二段階認証を用いていましたが、利用者からめんどくさいなど要望があったので、firebaseの導入などはどうしようかななどと考えています。）。
